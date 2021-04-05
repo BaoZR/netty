@@ -1,3 +1,5 @@
+package com.rd.simple;
+
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
@@ -15,7 +17,7 @@ import java.net.InetSocketAddress;
 
 
 public class HttpServer {
-    public void start(int port) throws Exception {
+    private void start(int port) throws Exception {
         EventLoopGroup bossGroup = new NioEventLoopGroup();
         EventLoopGroup workerGroup = new NioEventLoopGroup();
         try {

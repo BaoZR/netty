@@ -1,3 +1,6 @@
+package com.rd.simple;
+
+import com.rd.simple.HttpClientHandler;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelFuture;
@@ -20,7 +23,7 @@ import java.nio.charset.StandardCharsets;
  *
  */
 public class HttpClient {
-    public void connect(String host, int port) throws Exception {
+    private void connect(String host, int port) throws Exception {
         EventLoopGroup group = new NioEventLoopGroup();
         try {
             Bootstrap b = new Bootstrap();
